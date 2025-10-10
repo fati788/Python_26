@@ -3,10 +3,13 @@
 
 #- Añade 3 estudiantes.
 #- Muestra el promedio de las notas.
-estudiantes = {}
+diccionario = {}
 for i in range(3):
-    nombre = input("Introduce el nombre del estudiante: ")
-    nota = float(input("Introduce la nota del estudiante: "))
-    estudiantes[nombre] = nota  
-promedio = sum(estudiantes.values()) / len(estudiantes)
-print("El promedio de las notas es:", promedio)
+    clave = input("Dime el nombre: ")
+    valor = float(input("Dime la nota: "))
+    diccionario[clave] = valor
+
+print(diccionario)
+
+notas = diccionario.values()
+print("La media es:", sum(notas)/len(notas))
