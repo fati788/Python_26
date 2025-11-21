@@ -1,13 +1,5 @@
-"""
-Ejercicio 5: Gestor de fechas
+#Ejercicio 5: Gestor de fechas
 
-Usa el módulo datetime para crear una función que:
-
-    Reciba una fecha de cumpleaños (día, mes, año)
-    Calcule cuántos días faltan para el próximo cumpleaños
-    Si ya pasó este año, calcule para el próximo año
-
-"""
 from datetime import datetime
 def dias_para_cumpleanos(dia, mes, anio):
     hoy = datetime.now()

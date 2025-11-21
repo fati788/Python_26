@@ -1,32 +1,28 @@
-#Crea una función que reciba una lista de números y retorne un diccionario con la media, mediana y moda.
+
+#Ejercicio 1: Calculadora de estadísticas
 
 def calcular_estadisticas(numeros):
     from collections import Counter
-
-    if not numeros:
-        return {"media": None, "mediana": None, "moda": None}
-
-    # Calcular la media
-    media = sum(numeros) / len(numeros)
-
-    # Calcular la mediana
+    n = len(numeros)
+    media = sum(numeros) / n
+    
     numeros_ordenados = sorted(numeros)
-    n = len(numeros_ordenados)
     if n % 2 == 0:
-        mediana = (numeros_ordenados[n // 2 - 1] + numeros_ordenados[n // 2]) / 2
+        mediana = (numeros_ordenados[n//2 - 1] + numeros_ordenados[n//2]) / 2
     else:
-        mediana = numeros_ordenados[n // 2]
-
-    # Calcular la moda
+        mediana = numeros_ordenados[n//2]
+    
     contador = Counter(numeros)
     max_frecuencia = max(contador.values())
     modas = [num for num, freq in contador.items() if freq == max_frecuencia]
-    moda = modas[0] if len(modas) == 1 else modas  # Si hay más de una moda, devolver todas
-
-    return {"media": media, "mediana": mediana, "moda": moda}
-
-
+    moda = modas[0] if len(modas) == 1 else modas
+    
+    return {
+        'media': round(media, 2),
+        'mediana': mediana,
+        'moda': moda
+    }
 # Ejemplo de uso
-numeros = [1, 2, 2, 3, 4]
-estadisticas = calcular_estadisticas(numeros)
-print(estadisticas)  # Salida: {'media': 2.4, 'mediana': 2, 'moda': 2}
+numeros = [1, 2, 2, 3, 4, 5, 5, 5, 6]
+resultado = calcular_estadisticas(numeros)
+print(resultado) 

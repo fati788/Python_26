@@ -1,14 +1,5 @@
-"""
-Ejercicio 3: Contador de palabras
+#Ejercicio 3: Contador de palabras
 
-Crea una función que reciba un texto y retorne un diccionario con la frecuencia de cada palabra (ignorando mayúsculas/minúsculas y signos de puntuación).
-
-Ejemplo:
-
-texto = "Python es genial. Python es poderoso y Python es versátil."
-contar_palabras(texto)
-# {'python': 3, 'es': 3, 'genial': 1, 'poderoso': 1, 'y': 1, 'versátil': 1}
-"""
 def contar_palabras(texto):
     import string
     from collections import Counter
