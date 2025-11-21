@@ -1,15 +1,4 @@
-"""
-Ejercicio 4: Utilidades de strings
 
-Crea un módulo string_utils.py con las siguientes funciones:
-
-    invertir_texto(texto): Invierte el orden de los caracteres
-    contar_vocales(texto): Cuenta cuántas vocales hay
-    es_palindromo(texto): Verifica si es un palíndromo
-    capitalizar_palabras(texto): Capitaliza la primera letra de cada palabra
-
-Importa y usa estas funciones en otro archivo.
-"""
 # string_utils.py
 # invertir_texto(texto): Invierte el orden de los caracteres
 def invertir_texto(texto):
